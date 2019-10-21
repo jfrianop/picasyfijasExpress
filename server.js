@@ -1,6 +1,7 @@
 const Game = require("./game.js");
 const express = require('express');
 const app = express();
+var port = process.env.PORT || 3000;
 
 //Public folder
 app.use(express.static('public'));
@@ -72,8 +73,8 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(80, ()=>{
-  console.log("Listening on port 80");
+app.listen(port, ()=>{
+  console.log(`Listening on port !`);
 })
 
 
