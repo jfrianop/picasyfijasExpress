@@ -72,7 +72,9 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(3000)
+app.listen(80, ()=>{
+  console.log("Listening on port 80");
+})
 
 
 //looks for the game with a given id in the array and returns the index
